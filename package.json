@@ -1,0 +1,19 @@
+{
+  "name": "reblock",
+  "version": "1.0.0",
+  "description": "Track blocks of time to get more done",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meeshbhoombah/reblock.git"
+  },
+  "author": "@meeshbhoombah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Meeshbhoombah/reblock/issues"
+  },
+  "homepage": "https://github.com/Meeshbhoombah/reblock#readme"
+}
