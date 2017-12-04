@@ -4,7 +4,9 @@
   "description": "Track blocks of time to get more done",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "test": "node server.js",
+    "build": "webpack -p",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Meeshbhoombah/reblock/issues"
   },
-  "homepage": "https://github.com/Meeshbhoombah/reblock#readme"
+  "homepage": "https://github.com/Meeshbhoombah/reblock#readme",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }
