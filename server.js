@@ -24,7 +24,7 @@ const sequelize = new Sequelize("reblock_dev", "rohan", null, { dialect: "postgr
 sequelize
   .authenticate()
   .then(() => {
-    console.log("...ESTABLISHED DB CONNECTION...");
+    console.log("**** established db connection ****");
   })
   .catch(err => {
     console.error("Could not connect to database: ", err);
@@ -32,6 +32,6 @@ sequelize
 
 /* START SERVER */
 app.listen(app.get("port"), function() {
-    console.log("Reblock server started on http://localhost:" + app.get("port"));
+    console.log("reblock server started on http://localhost:" + app.get("port"));
 });
 
