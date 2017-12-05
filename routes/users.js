@@ -7,9 +7,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.post("/create", function(req, res) {
+/* ROUTES */
 
-});
-
+/* EXPORT ROUTES */
 module.exports = router;
 

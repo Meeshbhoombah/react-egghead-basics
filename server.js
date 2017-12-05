@@ -8,12 +8,14 @@ const express = require("express");
 
 /* CONFIG */
 const app = express();
-app.set('port', process.env.PORT || 3000)
+app.set("port", process.env.PORT || 3000)
 
 /* ROUTES */
-const user = require('./routes/users');
+const users = require("./routes/users");
+const blocks = require("./routes/blocks");
 
-app.use('/api/user/', user)
+app.use("/api/user/", users);
+app.use("/api/block/", blocks);
 
 /* START SERVER */
 app.listen(app.get('port'), function() {
