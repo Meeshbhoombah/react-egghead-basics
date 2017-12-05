@@ -5,6 +5,7 @@
  */
 
 const express = require("express");
+const Sequelize = require("sequelize");
 
 /* CONFIG */
 const app = express();
@@ -17,8 +18,20 @@ const blocks = require("./routes/blocks");
 app.use("/api/user/", users);
 app.use("/api/block/", blocks);
 
+/* CONNECT TO DB */
+const sequelize = new Sequelize("reblock_dev", "rohan", null, { dialect: "postgres" });
+
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("...ESTABLISHED DB CONNECTION...");
+  })
+  .catch(err => {
+    console.error("Could not connect to database: ", err);
+  });
+
 /* START SERVER */
-app.listen(app.get('port'), function() {
-    console.log("Reblock server started on http://localhost:" + app.get('port'));
+app.listen(app.get("port"), function() {
+    console.log("Reblock server started on http://localhost:" + app.get("port"));
 });
 
